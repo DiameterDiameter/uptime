@@ -1,0 +1,8 @@
+---
+- hosts: linux
+  tasks:
+  - name: ensure apache is at the latest version
+    command: echo "hello"
+    register: task_result
+    
+  - debug: msg="{{task_result.stdout}}"
